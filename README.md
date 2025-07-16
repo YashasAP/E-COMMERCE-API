@@ -57,7 +57,8 @@ For Admin:
 
 Expected Response: 200 OK with a JSON body containing the token, username, and role.
 
-![image alt](image_url)
+![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/admin_login.png )
+![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/customer_login.png )
 
 {
     "token": "eyJhbGciOiJIUzI1NiJ9...", // <-- Copy this token!
@@ -77,7 +78,7 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
   Expected Response: 200 OK with a list of products (initially empty).
 
 
-  ![image alt](image_url)
+  ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/get_all_products.png )
 
   3.2. Create a Product (Admin Only)
   Endpoint: POST http://localhost:8080/api/products
@@ -139,7 +140,7 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
  Authorization: Bearer <ADMIN_JWT_TOKEN>
 
  Expected Response: 204 No Content.
- ![image alt](image_url)
+ ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/delete_product.png )
 
 4. Cart Management (Customer Role Required)
   You need to use the JWT token obtained from logging in as customeruser for these requests.
