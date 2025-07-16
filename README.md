@@ -27,6 +27,7 @@ For an ADMIN:
 }
 
 Expected Response: 201 Created with a success message.
+![image alt](image_url)
 
 
 2. User Login and Get JWT Token
@@ -55,6 +56,8 @@ For Admin:
 }
 
 Expected Response: 200 OK with a JSON body containing the token, username, and role.
+
+![image alt](image_url)
 
 {
     "token": "eyJhbGciOiJIUzI1NiJ9...", // <-- Copy this token!
