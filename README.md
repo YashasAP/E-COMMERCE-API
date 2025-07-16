@@ -28,7 +28,7 @@ For an ADMIN:
 
 Expected Response: 201 Created with a success message.
 ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/2edcb7d3fb0759a1f629a4a2f5dd1a99f47de9ca/postman%20Images/customer_registration.png)
-
+![image alt]([https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/admin_registration.png )
 
 2. User Login and Get JWT Token
 After registration, log in to get a JWT token.
