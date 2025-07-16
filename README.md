@@ -110,7 +110,7 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
 
    Expected Response: 200 OK with the product details, or 404 Not Found if the ID doesn't exist.
 
-   ![image alt](image_url)
+   ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/4c0d96488272d08c40747358d2a80386a8ab7c28/postman%20Images/get_product_by_id.png )
 
   3.4. Update a Product (Admin Only)
   Endpoint: PUT http://localhost:8080/api/products/{productId} (e.g., http://localhost:8080/api/products/1)
@@ -131,7 +131,7 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
 
  Expected Response: 200 OK with the updated product details.
 
- ![image alt](image_url)
+ ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/4c0d96488272d08c40747358d2a80386a8ab7c28/postman%20Images/update_product_by_id_admin_token.png )
 
  3.5. Delete a Product (Admin Only)
  Endpoint: DELETE http://localhost:8080/api/products/{productId} (e.g., http://localhost:8080/api/products/1)
