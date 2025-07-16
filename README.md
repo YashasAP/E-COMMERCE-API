@@ -76,6 +76,9 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
 
   Expected Response: 200 OK with a list of products (initially empty).
 
+
+  ![image alt](image_url)
+
   3.2. Create a Product (Admin Only)
   Endpoint: POST http://localhost:8080/api/products
 
@@ -96,12 +99,16 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
 
   Expected Response: 201 Created with the created product details.
 
+  ![image alt](image_url)
+
 
 
   3.3. Get Product by ID (Public)
   Endpoint: GET http://localhost:8080/api/products/{productId} (Replace {productId} with an actual product ID, e.g., http://localhost:8080/api/products/1)
 
    Expected Response: 200 OK with the product details, or 404 Not Found if the ID doesn't exist.
+
+   ![image alt](image_url)
 
   3.4. Update a Product (Admin Only)
   Endpoint: PUT http://localhost:8080/api/products/{productId} (e.g., http://localhost:8080/api/products/1)
@@ -122,6 +129,8 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
 
  Expected Response: 200 OK with the updated product details.
 
+ ![image alt](image_url)
+
  3.5. Delete a Product (Admin Only)
  Endpoint: DELETE http://localhost:8080/api/products/{productId} (e.g., http://localhost:8080/api/products/1)
 
@@ -130,6 +139,7 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
  Authorization: Bearer <ADMIN_JWT_TOKEN>
 
  Expected Response: 204 No Content.
+ ![image alt](image_url)
 
 4. Cart Management (Customer Role Required)
   You need to use the JWT token obtained from logging in as customeruser for these requests.
@@ -159,6 +169,7 @@ Body (raw, JSON):
 }
 
 Expected Response: 200 OK with the updated cart details.
+![image alt](image_url)
 
 4.3. Update Cart Item Quantity
 Endpoint: PUT http://localhost:8080/api/cart/update
@@ -182,6 +193,7 @@ Headers:
 Authorization: Bearer <CUSTOMER_JWT_TOKEN>
 
 Expected Response: 200 OK with the updated cart details (after removal).
+![image alt](image_url)
 
 
 5. Order Management
