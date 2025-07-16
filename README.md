@@ -27,7 +27,9 @@ For an ADMIN:
 }
 
 Expected Response: 201 Created with a success message.
+
 ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/2edcb7d3fb0759a1f629a4a2f5dd1a99f47de9ca/postman%20Images/customer_registration.png)
+
 ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/admin_registration.png )
 
 2. User Login and Get JWT Token
@@ -58,18 +60,15 @@ For Admin:
 Expected Response: 200 OK with a JSON body containing the token, username, and role.
 
 ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/admin_login.png )
+
 ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/customer_login.png )
 
-{
-    "token": "eyJhbGciOiJIUzI1NiJ9...", // <-- Copy this token!
-    "username": "customeruser",
-    "role": "CUSTOMER"
-}
+
 
 3. Product Management (Admin Role Required)
 You need to use the JWT token obtained from logging in as adminuser for these requests.
 
-Authorization: In Postman, go to the "Authorization" tab, select "Type" as Bearer Token, and paste your admin JWT token into the "Token" field.
+  Authorization: In Postman, go to the "Authorization" tab, select "Type" as Bearer Token, and paste your admin JWT token into the "Token" field.
 
   3.1. Get All Products (Public)
   Endpoint: GET http://localhost:8080/api/products
@@ -81,38 +80,15 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
 
   ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/get_all_products.png )
 
-  3.2. Create a Product (Admin Only)
-  Endpoint: POST http://localhost:8080/api/products
 
-  Headers:
-
-  Content-Type: application/json
-
-  Authorization: Bearer <ADMIN_JWT_TOKEN>
-
-  Body (raw, JSON):
-
-  {
-    "name": "Laptop Pro",
-    "description": "High performance laptop for professionals.",
-    "price": 1200.00,
-    "stock": 50
-  }
-
-  Expected Response: 201 Created with the created product details.
-
-  ![image alt](image_url)
-
-
-
-  3.3. Get Product by ID (Public)
+  3.2. Get Product by ID (Public)
   Endpoint: GET http://localhost:8080/api/products/{productId} (Replace {productId} with an actual product ID, e.g., http://localhost:8080/api/products/1)
 
    Expected Response: 200 OK with the product details, or 404 Not Found if the ID doesn't exist.
 
    ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/4c0d96488272d08c40747358d2a80386a8ab7c28/postman%20Images/get_product_by_id.png )
 
-  3.4. Update a Product (Admin Only)
+  3.3. Update a Product (Admin Only)
   Endpoint: PUT http://localhost:8080/api/products/{productId} (e.g., http://localhost:8080/api/products/1)
 
  Headers:
@@ -133,6 +109,7 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
 
  ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/4c0d96488272d08c40747358d2a80386a8ab7c28/postman%20Images/update_product_by_id_admin_token.png )
 
+ 
  3.5. Delete a Product (Admin Only)
  Endpoint: DELETE http://localhost:8080/api/products/{productId} (e.g., http://localhost:8080/api/products/1)
 
@@ -141,7 +118,9 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
  Authorization: Bearer <ADMIN_JWT_TOKEN>
 
  Expected Response: 204 No Content.
+ 
  ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/222289bc8040ce1906b275af4af7ab6ab3b7a93a/postman%20Images/delete_product.png )
+
 
 4. Cart Management (Customer Role Required)
   You need to use the JWT token obtained from logging in as customeruser for these requests.
@@ -155,6 +134,7 @@ Authorization: In Postman, go to the "Authorization" tab, select "Type" as Beare
  Authorization: Bearer <CUSTOMER_JWT_TOKEN>
 
  Expected Response: 200 OK with the current cart details.
+
 
 4.2. Add Product to Cart
 Endpoint: POST http://localhost:8080/api/cart/add
@@ -171,6 +151,7 @@ Body (raw, JSON):
 }
 
 Expected Response: 200 OK with the updated cart details.
+
 ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/86903b1b2169984b5f62a88c944f1c21a554f586/postman%20Images/adding_to_cart.png )
 
 4.3. Update Cart Item Quantity
@@ -195,6 +176,7 @@ Headers:
 Authorization: Bearer <CUSTOMER_JWT_TOKEN>
 
 Expected Response: 200 OK with the updated cart details (after removal).
+
 ![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/86903b1b2169984b5f62a88c944f1c21a554f586/postman%20Images/remove_from_cart.png )
 
 
