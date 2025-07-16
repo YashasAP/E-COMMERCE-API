@@ -65,6 +65,7 @@ Expected Response: 200 OK with a JSON body containing the token, username, and r
     "username": "customeruser",
     "role": "CUSTOMER"
 }
+
 3. Product Management (Admin Role Required)
 You need to use the JWT token obtained from logging in as adminuser for these requests.
 
@@ -170,7 +171,7 @@ Body (raw, JSON):
 }
 
 Expected Response: 200 OK with the updated cart details.
-![image alt](image_url)
+![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/86903b1b2169984b5f62a88c944f1c21a554f586/postman%20Images/adding_to_cart.png )
 
 4.3. Update Cart Item Quantity
 Endpoint: PUT http://localhost:8080/api/cart/update
@@ -194,7 +195,7 @@ Headers:
 Authorization: Bearer <CUSTOMER_JWT_TOKEN>
 
 Expected Response: 200 OK with the updated cart details (after removal).
-![image alt](image_url)
+![image alt](https://github.com/YashasAP/E-COMMERCE-API/blob/86903b1b2169984b5f62a88c944f1c21a554f586/postman%20Images/remove_from_cart.png )
 
 
 5. Order Management
